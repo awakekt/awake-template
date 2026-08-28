@@ -1,0 +1,59 @@
+rootProject.name = "AwakeTemplate"
+
+pluginManagement {
+    repositories {
+        google {
+            mavenContent {
+                includeGroupAndSubgroups("androidx")
+                includeGroupAndSubgroups("com.android")
+                includeGroupAndSubgroups("com.google")
+            }
+        }
+        mavenCentral()
+        mavenLocal()
+        gradlePluginPortal()
+    }
+}
+
+dependencyResolutionManagement {
+    repositories {
+        google {
+            mavenContent {
+                includeGroupAndSubgroups("androidx")
+                includeGroupAndSubgroups("com.android")
+                includeGroupAndSubgroups("com.google")
+            }
+        }
+        mavenCentral()
+        mavenLocal()
+    }
+}
+
+// Optional local development substitution. A published Awake release remains the default for
+// anyone cloning this template, while a sibling Awake checkout can validate the template before
+// the next engine snapshot is available from Maven.
+if (file("../awaken").isDirectory) {
+    includeBuild("../awaken") {
+        dependencySubstitution {
+            substitute(module("io.github.awake-lab.engine:bootstrap"))
+                .using(project(":awake:engine:bootstrap"))
+            substitute(module("io.github.awake-lab.asset:shaders"))
+                .using(project(":awake:asset:shaders"))
+            substitute(module("io.github.awake-lab.backend:vulkan"))
+                .using(project(":awake:backend:vulkan"))
+            substitute(module("io.github.awake-lab.backend:webgpu"))
+                .using(project(":awake:backend:webgpu"))
+        }
+    }
+}
+
+plugins {
+    id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
+}
+
+include(":app:androidApp")
+include(":app:desktopApp")
+include(":app:shared")
+include(":app:webApp")
+include(":core")
+include(":server")
