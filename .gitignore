@@ -1,20 +1,42 @@
-*.iml
-.kotlin
-.gradle
+# Gradle and Kotlin build output
+.gradle/
 **/build/
-xcuserdata
-!src/**/build/
+.kotlin/
+
+# Local machine configuration
 local.properties
-.idea
-.DS_Store
-.kmp-wizard-git/
-captures
-.externalNativeBuild
-.cxx
-*.xcodeproj/*
-!*.xcodeproj/project.pbxproj
-!*.xcodeproj/xcshareddata/
-!*.xcodeproj/project.xcworkspace/
-!*.xcworkspace/contents.xcworkspacedata
-**/xcshareddata/WorkspaceSettings.xcsettings
+*.local
+
+# IntelliJ IDEA / Android Studio
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Android tooling
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Kotlin/Native and compiler artifacts
+*.hprof
+
+# Xcode user state and derived data
+DerivedData/
+**/xcuserdata/
+**/*.xcuserstate
+**/*.xcscmblueprint
+**/project.xcworkspace/xcuserdata/
+**/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+**/*.xcworkspace/xcuserdata/
+
+# JavaScript / Webpack tooling
 node_modules/
+.webpack/
+
+# macOS
+.DS_Store
+
+# Preserved only for the official KMP wizard provenance checkout.
+.kmp-wizard-git/
