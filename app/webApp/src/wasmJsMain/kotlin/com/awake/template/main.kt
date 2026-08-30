@@ -1,8 +1,8 @@
 package com.awake.template
 
-import io.github.ronjunevaldoz.awake.webgpu.application.WebGpuEngine
-import io.github.ronjunevaldoz.awake.webgpu.application.launchWebGpuGame
-import io.github.ronjunevaldoz.awake.engine.platform.dsl.AppWindowBackend
+import io.github.awakelab.awake.webgpu.application.WebGpuEngine
+import io.github.awakelab.awake.webgpu.application.launchWebGpuGame
+import io.github.awakelab.awake.engine.platform.dsl.AppWindowBackend
 
 fun main() = launchWebGpuGame {
     WebGpuEngine(

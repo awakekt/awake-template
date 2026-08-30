@@ -1,14 +1,14 @@
 package com.awake.template
 
-import io.github.ronjunevaldoz.awake.asset.shaders.RenderPlan
-import io.github.ronjunevaldoz.awake.asset.shaders.ScenePipeline
-import io.github.ronjunevaldoz.awake.asset.shaders.shaderSet
-import io.github.ronjunevaldoz.awake.core.geometry.VertexFormat
-import io.github.ronjunevaldoz.awake.engine.bootstrap.dsl.app
-import io.github.ronjunevaldoz.awake.engine.platform.dsl.AppWindowBackend
-import io.github.ronjunevaldoz.awake.engine.bootstrap.dsl.select
-import io.github.ronjunevaldoz.awake.engine.platform.lifecycle.AwakeAppLifecycle
-import io.github.ronjunevaldoz.awake.render.pipeline.PipelineKey
+import io.github.awakelab.awake.asset.shaders.RenderPlan
+import io.github.awakelab.awake.asset.shaders.ScenePipeline
+import io.github.awakelab.awake.asset.shaders.shaderSet
+import io.github.awakelab.awake.core.geometry.VertexFormat
+import io.github.awakelab.awake.engine.bootstrap.dsl.app
+import io.github.awakelab.awake.engine.platform.dsl.AppWindowBackend
+import io.github.awakelab.awake.engine.bootstrap.dsl.select
+import io.github.awakelab.awake.engine.platform.lifecycle.AwakeAppLifecycle
+import io.github.awakelab.awake.render.pipeline.PipelineKey
 
 /** Creates a fresh application lifecycle for a platform host. */
 fun createGame(windowBackend: AppWindowBackend = AppWindowBackend.VULKAN): AwakeAppLifecycle = app {
