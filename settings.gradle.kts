@@ -35,13 +35,13 @@ dependencyResolutionManagement {
 if (file("../awaken").isDirectory) {
     includeBuild("../awaken") {
         dependencySubstitution {
-            substitute(module("io.github.awake-lab.engine:bootstrap"))
+            substitute(module("com.awakekt.awake.engine:bootstrap"))
                 .using(project(":awake:engine:bootstrap"))
-            substitute(module("io.github.awake-lab.asset:shaders"))
+            substitute(module("com.awakekt.awake.asset:shaders"))
                 .using(project(":awake:asset:shaders"))
-            substitute(module("io.github.awake-lab.backend:vulkan"))
+            substitute(module("com.awakekt.awake.backend:vulkan"))
                 .using(project(":awake:backend:vulkan"))
-            substitute(module("io.github.awake-lab.backend:webgpu"))
+            substitute(module("com.awakekt.awake.backend:webgpu"))
                 .using(project(":awake:backend:webgpu"))
         }
     }
