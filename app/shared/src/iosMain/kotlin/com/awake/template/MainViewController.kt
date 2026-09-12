@@ -1,7 +1,7 @@
 package com.awake.template
 
-import io.github.awakelab.awake.vulkan.application.VulkanEngine
-import io.github.awakelab.awake.vulkan.application.makeVulkanGameViewController
+import com.awakekt.awake.vulkan.application.VulkanEngine
+import com.awakekt.awake.vulkan.application.makeVulkanGameViewController
 
 fun MainViewController() = makeVulkanGameViewController(
     VulkanEngine(

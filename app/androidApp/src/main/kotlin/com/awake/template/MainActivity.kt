@@ -2,8 +2,8 @@ package com.awake.template
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
-import io.github.awakelab.awake.engine.platform.VulkanView
-import io.github.awakelab.awake.vulkan.application.VulkanEngine
+import com.awakekt.awake.engine.platform.VulkanView
+import com.awakekt.awake.vulkan.application.VulkanEngine
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
