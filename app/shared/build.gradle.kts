@@ -32,7 +32,7 @@ kotlin {
        minSdk = libs.versions.android.minSdk.get().toInt()
     
        compilerOptions {
-           jvmTarget = JvmTarget.JVM_11
+           jvmTarget = JvmTarget.JVM_17
        }
        androidResources {
            enable = true
@@ -48,10 +48,6 @@ kotlin {
     }
     
     sourceSets {
-        // The Android library packages only its own Java resources, so it takes the project from commonMain's.
-        androidMain {
-            resources.srcDir("src/commonMain/resources")
-        }
         androidMain.dependencies {
             implementation(libs.compose.uiToolingPreview)
             implementation(libs.compose.uiTooling)
@@ -61,11 +57,9 @@ kotlin {
             implementation(libs.awake.engine.bootstrap)
             implementation(libs.awake.asset.shaders)
             implementation(libs.awake.asset.shader.pack)
-            implementation(libs.awake.core.host)
             implementation(libs.awake.scene.authoring)
-            // api: loadGame and createGame hand PlayableProject to every app module.
-            api(libs.awake.project.runtime)
-            implementation(libs.awake.backend.jolt)
+            // builtInSceneAssets: the ready-made meshes and the lit material.
+            implementation(libs.awake.project.runtime)
             implementation(libs.compose.runtime)
             implementation(libs.compose.foundation)
             implementation(libs.compose.material3)

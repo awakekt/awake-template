@@ -49,10 +49,8 @@ awake-engine-bootstrap = { module = "com.awakekt.awake.engine:bootstrap", versio
 awake-engine-window = { module = "com.awakekt.awake.engine:window", version.ref = "awake" }
 awake-asset-shaders = { module = "com.awakekt.awake.asset:shaders", version.ref = "awake" }
 awake-asset-shader-pack = { module = "com.awakekt.awake.asset:shader-pack", version.ref = "awake" }
-awake-core-host = { module = "com.awakekt.awake.core:host", version.ref = "awake" }
 awake-scene-authoring = { module = "com.awakekt.awake.scene:authoring", version.ref = "awake" }
 awake-project-runtime = { module = "com.awakekt.awake.project:runtime", version.ref = "awake" }
-awake-backend-jolt = { module = "com.awakekt.awake.backend:jolt", version.ref = "awake" }
 awake-backend-vulkan = { module = "com.awakekt.awake.backend:vulkan", version.ref = "awake-vulkan" }
 awake-backend-webgpu = { module = "com.awakekt.awake.backend:webgpu", version.ref = "awake" }
 
