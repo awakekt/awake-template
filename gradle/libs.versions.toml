@@ -20,6 +20,9 @@ material3 = "1.11.0-alpha07"
 # Core modules and Vulkan backend use independent version trains.
 awake = "0.1.0-rc.12"
 awake-vulkan = "0.1.15"
+# The WebGPU backend is not released to Maven Central while it builds on a wgpu4k snapshot; it
+# publishes only snapshots. Keep it on the snapshot of the Core release above.
+awake-webgpu = "0.1.0-rc.12-SNAPSHOT"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -52,7 +55,7 @@ awake-asset-shader-pack = { module = "com.awakekt.awake.asset:shader-pack", vers
 awake-scene-authoring = { module = "com.awakekt.awake.scene:authoring", version.ref = "awake" }
 awake-project-runtime = { module = "com.awakekt.awake.project:runtime", version.ref = "awake" }
 awake-backend-vulkan = { module = "com.awakekt.awake.backend:vulkan", version.ref = "awake-vulkan" }
-awake-backend-webgpu = { module = "com.awakekt.awake.backend:webgpu", version.ref = "awake" }
+awake-backend-webgpu = { module = "com.awakekt.awake.backend:webgpu", version.ref = "awake-webgpu" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
