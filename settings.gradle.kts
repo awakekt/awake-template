@@ -27,6 +27,9 @@ dependencyResolutionManagement {
         }
         mavenCentral()
         mavenLocal()
+        // The wgpu4k builds the WebGPU backend pins, copied byte for byte by Awake Core, for when
+        // Central's 90-day snapshot cleanup removes them.
+        maven("https://awakekt.github.io/awake/") { mavenContent { includeGroup("io.ygdrasil") } }
     }
 }
 

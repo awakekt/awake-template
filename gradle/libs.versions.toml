@@ -21,8 +21,9 @@ material3 = "1.11.0-alpha07"
 awake = "0.8.3"
 awake-vulkan = "0.1.25"
 # The WebGPU backend is not released to Maven Central while it builds on a wgpu4k snapshot; it
-# publishes only snapshots. Keep it on the snapshot of the Core release above.
-awake-webgpu = "0.8.4-SNAPSHOT"
+# publishes only snapshots. Keep it on "<awake>-SNAPSHOT", the snapshot of the Core release above,
+# never the next patch.
+awake-webgpu = "0.8.3-SNAPSHOT"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
