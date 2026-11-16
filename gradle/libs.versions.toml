@@ -22,12 +22,12 @@ material3 = "1.11.0-alpha07"
 # Core modules and Vulkan backend use independent version trains. Gradle lines them up on its own:
 # every Core module depends on com.awakekt.awake:bom, so the newest Core in the build lifts all of
 # them, a Vulkan release's included. To state the version, implementation(platform("com.awakekt.awake:bom:<awake>")).
-awake = "0.27.1"
-awake-vulkan = "0.1.38"
+awake = "0.54.0"
+awake-vulkan = "0.1.59"
 # The WebGPU backend is not released to Maven Central while it builds on a wgpu4k snapshot; it
 # publishes only snapshots. Keep it on "<awake>-SNAPSHOT", the snapshot of the Core release above,
 # never the next patch.
-awake-webgpu = "0.27.1-SNAPSHOT"
+awake-webgpu = "0.54.0-SNAPSHOT"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -66,6 +66,7 @@ awake-backend-webgpu = { module = "com.awakekt.awake.backend:webgpu", version.re
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 androidMultiplatformLibrary = { id = "com.android.kotlin.multiplatform.library", version.ref = "agp" }
+awakeBasisTranscoder = { id = "com.awakekt.awake.plugin.basis-transcoder", version.ref = "awake" }
 composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "composeMultiplatform" }
 composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
